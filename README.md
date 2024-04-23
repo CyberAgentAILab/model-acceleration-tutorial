@@ -8,10 +8,10 @@ ailab-onboarding-2024 "モデルコードの高速化・最適化チュートリ
 # Table of Contents
 
 ## 1. はじめに
-### 1-1. [このチュートリアルの目的](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/01_Introduction/1_1-Purpose_of_this_tutorial.md)
-### 1-2. [解説すること・しないこと](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/01_Introduction/1_2-What_to_explain_and_what_not_to_explain.md)
+### 1-1. [このチュートリアルの目的](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/01_Introduction/1_1-Purpose_of_this_tutorial.md) (1 min)
+### 1-2. [解説すること・しないこと](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/01_Introduction/1_2-What_to_explain_and_what_not_to_explain.md) (1 min)
 ## 2. モデルをデプロイするときのランタイムの選択肢
-### 2-1. ランタイムの選択肢
+### 2-1. [ランタイムの選択肢](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/02_Runtime/2_1-Runtime_Options.md)
 ### 2-2. モデルのデプロイ先デバイスとランタイム
 ## 3. 研究からプロダクト転用を見越したモデル設計時に注意したいこと
 ### 3-1. CPU・GPU・TensorRT、他HW・FW推論を意識した設計
