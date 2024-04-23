@@ -8,12 +8,14 @@
 - 研究からプロダクト転用を見越したモデル設計時に注意したいこと（以下全てコードレベルでの詳解とする）
 
 ### 解説しないこと
-  - Python以外の言語によるモデル設計手法
-  - PyTorch以外のフレームワークによるモデル設計（例えば JAX, TensorFlow/Keras）
-  - モデルのトレーニングの手法
-  - モデルトレーニングの高速化
-  - モデルのアーキテクチャ
-  - オンプレ以外の外部APIを使用した推論の最適化・高速化手法など
-  - Docker環境構築の内容
+- Python以外の言語によるモデル設計手法
+- PyTorch以外のフレームワークによるモデル設計（例えば JAX, TensorFlow/Keras）
+- モデルのトレーニングの手法
+- モデルトレーニングの高速化
+- モデルのアーキテクチャ
+- オンプレ以外の外部APIを使用した推論の最適化・高速化手法など
+- Docker環境構築の内容
+
+では、早速解説していきます。
 
 **[■ 目次](https://github.com/CyberAgentAILab/model-acceleration-tutorial/tree/main?tab=readme-ov-file#table-of-contents)**　**[◀ 前へ](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/01_Introduction/1_1-Purpose_of_this_tutorial.md)**　**[次へ ▶](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/02_Runtime/2_1-Runtime_Options.md)**
