@@ -1,6 +1,6 @@
 **[■ 目次](https://github.com/CyberAgentAILab/model-acceleration-tutorial/tree/main?tab=readme-ov-file#table-of-contents)**　**[◀ 前へ](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/01_Introduction/1_1-Purpose_of_this_tutorial.md)**　**[次へ ▶](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/02_Runtime/2_1-Runtime_Options.md)**
 
-## 1-2. 解説すること・しないこと
+## 1-2. 解説すること・しないこと (1 min)
 
 ### 解説すること
 - モデルをデプロイするときのランタイムの選択肢とそれぞれのメリット・デメリット、デプロイ先
