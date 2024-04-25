@@ -193,7 +193,7 @@ docker images
 ubuntu 22.04 7af9ba4f0a47 2 weeks ago 77.9MB
 onnx latest 5985dc8c78bc About a minute ago 816MB
 ```
-依存関係を見てみます。パッケージの数自体もかなり少なく、ストレージの消費量は 1GB を下回りました。
+依存関係を見てみます。パッケージの数自体はかなり少なく、ストレージの消費量は 1GB を下回りました。
 ```bash
 docker run onnx pip list
 
