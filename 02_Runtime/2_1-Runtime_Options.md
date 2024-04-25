@@ -47,10 +47,48 @@ RUN apt-get update \
 docker build -t torch -f Dockerfile.pytorch .
 docker images
 ```
+Docker イメージのサイズが Wheel ファイルのサイズを大幅に超過しました。
 ```bash
 ubuntu 22.04 7af9ba4f0a47 2 weeks ago 77.9MB
 torch latest a8683c508332 48 seconds ago 5.33GB
 ```
+では、フレームワーク本体以外の部分がどれぐらい多く依存関係としてインストールされたかを見てみます。
+```bash
+docker run torch pip list
+
+Package                  Version
+------------------------ ----------
+filelock                 3.13.4
+fsspec                   2024.3.1
+Jinja2                   3.1.3
+MarkupSafe               2.1.5
+mpmath                   1.3.0
+networkx                 3.3
+numpy                    1.26.4
+nvidia-cublas-cu12       12.1.3.1
+nvidia-cuda-cupti-cu12   12.1.105
+nvidia-cuda-nvrtc-cu12   12.1.105
+nvidia-cuda-runtime-cu12 12.1.105
+nvidia-cudnn-cu12        8.9.2.26
+nvidia-cufft-cu12        11.0.2.54
+nvidia-curand-cu12       10.3.2.106
+nvidia-cusolver-cu12     11.4.5.107
+nvidia-cusparse-cu12     12.1.0.106
+nvidia-nccl-cu12         2.20.5
+nvidia-nvjitlink-cu12    12.4.127
+nvidia-nvtx-cu12         12.1.105
+pillow                   10.3.0
+pip                      22.0.2
+setuptools               59.6.0
+sympy                    1.12
+torch                    2.3.0
+torchaudio               2.3.0
+torchvision              0.18.0
+triton                   2.3.0
+typing_extensions        4.11.0
+wheel                    0.37.1
+```
+フレームワーク本体以外の部分だけで 4.5 GB もの依存パッケージが勝手にインストールされることが分かりました。なお、 `--no-deps` オプションを指定して `pip install` すれば本体のみをインストールすることが可能なためストレージ消費をもっと低く抑えることは可能ですが、依存するパッケージをインストールしないため、フレームワークが実質まともに動作しません。
 
 2. TensorFlow
 
