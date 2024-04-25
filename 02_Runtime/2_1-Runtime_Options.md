@@ -12,6 +12,12 @@ PyTorch や TensorFlow などで設計したモデルを学習し、プロダク
 では、上で挙げた点についてひとつづつ具体例を挙げていきます。
 
 ### 2-1-1. インストーラやバイナリのサイズ
+フレームワークを実際にインストールしてどれぐらいのリソースを消費するかを検証してみます。ここでは主要フレームワークの下記２種類を取り上げます。
+
+|Framework|Version|Installer|
+|:-:|:-|:-|
+|PyTorch|CUDA 12.1<br>Torch 2.3.0|[https://download.pytorch.org/whl/cu121/torch-2.3.0%2Bcu121-cp310-cp310-linux_x86_64.whl](https://download.pytorch.org/whl/cu121/torch-2.3.0%2Bcu121-cp310-cp310-linux_x86_64.whl)|
+|TensorFlow|||
 
 ### 2-1-2. ストレージサイズ
 
