@@ -14,10 +14,12 @@ PyTorch や TensorFlow などで設計したモデルを学習し、プロダク
 ### 2-1-1. インストーラやバイナリのサイズ
 フレームワークを実際にインストールしてどれぐらいのリソースを消費するかを検証してみます。ここでは主要フレームワークの下記２種類を取り上げます。
 
-|Framework|Version|Installer|
-|:-:|:-|:-|
-|PyTorch|2.3.0|[https://download.pytorch.org/whl/cu121/torch-2.3.0%2Bcu121-cp310-cp310-linux_x86_64.whl](https://download.pytorch.org/whl/cu121/torch-2.3.0%2Bcu121-cp310-cp310-linux_x86_64.whl)|
-|TensorFlow|2.16.1|[https://files.pythonhosted.org/packages/a8/dc/e5797d6bf966cd3baa5a6ae32bec31472934c9021ca1505dc7bf5c8fc902/tensorflow-2.16.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl](https://files.pythonhosted.org/packages/a8/dc/e5797d6bf966cd3baa5a6ae32bec31472934c9021ca1505dc7bf5c8fc902/tensorflow-2.16.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)|
+|Framework|Version|Installer|Installer Size|
+|:-:|:-|:-|-:|
+|PyTorch|2.3.0|[ダウンロード](https://download.pytorch.org/whl/cu121/torch-2.3.0%2Bcu121-cp310-cp310-linux_x86_64.whl)|781.0 MB|
+|TensorFlow|2.16.1|[ダウンロード](https://files.pythonhosted.org/packages/a8/dc/e5797d6bf966cd3baa5a6ae32bec31472934c9021ca1505dc7bf5c8fc902/tensorflow-2.16.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)|589.8 MB|
+
+いずれも 2024年04月25日時点 での最新バージョンです。２世代ほど古いバージョンのインストーラは 2GB を超えていましたが、最新のインストーラはどちらも大幅に軽量化されているようです。これはあくまで本体部分のインストーラのサイズであり、依存パッケージ部分を含まないサイズであることにご注意ください。では、実際にクリーンな環境へインストールしてどれほどストレージを消費するかを実際に検証してみます。
 
 ### 2-1-2. ストレージサイズ
 
