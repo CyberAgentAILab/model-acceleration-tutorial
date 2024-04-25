@@ -166,6 +166,50 @@ wrapt                        1.16.0
 ```
 
 #### 3. onnxruntime-gpu
+[Dockerfile.onnx](./Dockerfile.onnx)
+
+```Dockerfile
+FROM ubuntu:22.04
+ENV DEBIAN_FRONTEND=noninteractive
+SHELL ["/bin/bash", "-c"]
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        python3-pip \
+    && pip install \
+        onnxruntime-gpu \
+    && apt clean \
+    && rm -rf /var/lib/apt/lists/* \
+    && rm /etc/apt/apt.conf.d/docker-clean \
+    && pip cache purge
+```
+```bash
+docker build -t onnx -f Dockerfile.onnx .
+docker images
+```
+同じく、Docker イメージのサイズが Wheel ファイルのサイズを大幅に超過しました。
+```bash
+ubuntu 22.04 7af9ba4f0a47 2 weeks ago 77.9MB
+onnx latest 5985dc8c78bc About a minute ago 816MB
+```
+依存関係を見てみます。パッケージの数自体もかなり少なく、ストレージの消費量は 1GB を下回りました。
+```bash
+docker run onnx pip list
+
+Package         Version
+--------------- -------
+coloredlogs     15.0.1
+flatbuffers     24.3.25
+humanfriendly   10.0
+mpmath          1.3.0
+numpy           1.26.4
+onnxruntime-gpu 1.17.1
+packaging       24.0
+pip             22.0.2
+protobuf        5.26.1
+setuptools      59.6.0
+sympy           1.12
+wheel           0.37.1
+```
 
 ### 2-1-2. ストレージサイズ
 
