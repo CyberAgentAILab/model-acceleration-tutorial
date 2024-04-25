@@ -22,7 +22,35 @@ PyTorch や TensorFlow などで設計したモデルを学習し、プロダク
 
 いずれも 2024年04月25日時点 での最新バージョンです。PyTorchとTensorFlowは２世代以上古いバージョンのインストーラは 2GB を大幅に超えていましたが、最新のインストーラはどちらも大幅に軽量化されているようです。これはあくまで本体部分のインストーラのサイズであり、依存パッケージ部分を含まないサイズであることにご注意ください。では、実際にクリーンな環境へインストールしてどれほどストレージを消費するかを実際に検証してみます。あまり手間をかけず環境を汚さずに簡易的に計測したいため、Docker イメージをビルドしてイメージサイズを比較します。なお通常はフレームワークの本体のみをインストールして利用することは少なく、また、パッケージの依存関係に応じて自動的に周辺パッケージを追加インストールして利用することのほうが多いと思いますので、最もシンプルな公式のチュートリアルどおりの導入手順にしたがって環境構築する前提とします。
 
+```bash
+docker pull ubuntu:22.04
+```
+
 1. PyTorch
+```Dockerfile.pytorch
+FROM ubuntu:22.04
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        python3-pip \
+    && pip install \
+        torch \
+        torchvision \
+        torchaudio \
+    && apt clean \
+    && rm -rf /var/lib/apt/lists/* \
+    && rm /etc/apt/apt.conf.d/docker-clean \
+    && pip cache purge
+```
+```bash
+docker build -t torch -f Dockerfile.pytorch .
+docker images
+```
+```bash
+ubuntu 22.04 7af9ba4f0a47 2 weeks ago 77.9MB
+torch latest a8683c508332 48 seconds ago 5.33GB
+```
 
 2. TensorFlow
 
