@@ -32,7 +32,7 @@ docker pull ubuntu:22.04
 ```Dockerfile
 FROM ubuntu:22.04
 ENV DEBIAN_FRONTEND=noninteractive
-
+SHELL ["/bin/bash", "-c"]
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         python3-pip \
