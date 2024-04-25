@@ -27,6 +27,8 @@ docker pull ubuntu:22.04
 ```
 
 #### 1. PyTorch
+[Dockerfile.pytorch](./Dockerfile.pytorch)
+
 ```Dockerfile
 FROM ubuntu:22.04
 ENV DEBIAN_FRONTEND=noninteractive
