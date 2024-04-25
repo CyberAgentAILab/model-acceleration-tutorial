@@ -93,6 +93,77 @@ wheel                    0.37.1
 フレームワーク本体以外の部分だけで `4.5 GB` もの依存パッケージが勝手にインストールされることが分かりました。なお、 `--no-deps` オプションを指定して `pip install` すれば本体のみをインストールすることが可能なためストレージ消費をもっと低く抑えることは可能ですが、依存するパッケージをインストールしないため、フレームワークが実質まともに動作しません。
 
 #### 2. TensorFlow
+[Dockerfile.tensorflow](./Dockerfile.tensorflow)
+
+```Dockerfile
+FROM ubuntu:22.04
+ENV DEBIAN_FRONTEND=noninteractive
+SHELL ["/bin/bash", "-c"]
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        python3-pip \
+    && pip install \
+        tensorflow \
+    && apt clean \
+    && rm -rf /var/lib/apt/lists/* \
+    && rm /etc/apt/apt.conf.d/docker-clean \
+    && pip cache purge
+```
+```bash
+docker build -t tensorflow -f Dockerfile.tensorflow .
+docker images
+```
+同じく、Docker イメージのサイズが Wheel ファイルのサイズを大幅に超過しました。
+```bash
+ubuntu 22.04 7af9ba4f0a47 2 weeks ago 77.9MB
+tensorflow latest 787922c5739a 18 seconds ago 2.09GB
+```
+依存関係を見てみます。パッケージの数自体はかなり多いですが、ストレージの消費量は PyTorch の半分ほどでした。
+```bash
+docker run tensorflow pip list
+
+Package                      Version
+---------------------------- --------
+absl-py                      2.1.0
+astunparse                   1.6.3
+certifi                      2024.2.2
+charset-normalizer           3.3.2
+flatbuffers                  24.3.25
+gast                         0.5.4
+google-pasta                 0.2.0
+grpcio                       1.62.2
+h5py                         3.11.0
+idna                         3.7
+keras                        3.3.2
+libclang                     18.1.1
+Markdown                     3.6
+markdown-it-py               3.0.0
+MarkupSafe                   2.1.5
+mdurl                        0.1.2
+ml-dtypes                    0.3.2
+namex                        0.0.8
+numpy                        1.26.4
+opt-einsum                   3.3.0
+optree                       0.11.0
+packaging                    24.0
+pip                          22.0.2
+protobuf                     4.25.3
+Pygments                     2.17.2
+requests                     2.31.0
+rich                         13.7.1
+setuptools                   59.6.0
+six                          1.16.0
+tensorboard                  2.16.2
+tensorboard-data-server      0.7.2
+tensorflow                   2.16.1
+tensorflow-io-gcs-filesystem 0.36.0
+termcolor                    2.4.0
+typing_extensions            4.11.0
+urllib3                      2.2.1
+Werkzeug                     3.0.2
+wheel                        0.37.1
+wrapt                        1.16.0
+```
 
 #### 3. onnxruntime-gpu
 
