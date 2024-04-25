@@ -26,7 +26,7 @@ PyTorch や TensorFlow などで設計したモデルを学習し、プロダク
 docker pull ubuntu:22.04
 ```
 
-1. PyTorch
+#### 1. PyTorch
 ```Dockerfile
 FROM ubuntu:22.04
 ENV DEBIAN_FRONTEND=noninteractive
@@ -90,10 +90,9 @@ wheel                    0.37.1
 ```
 フレームワーク本体以外の部分だけで 4.5 GB もの依存パッケージが勝手にインストールされることが分かりました。なお、 `--no-deps` オプションを指定して `pip install` すれば本体のみをインストールすることが可能なためストレージ消費をもっと低く抑えることは可能ですが、依存するパッケージをインストールしないため、フレームワークが実質まともに動作しません。
 
-2. TensorFlow
+#### 2. TensorFlow
 
-3. onnxruntime-gpu
-
+#### 3. onnxruntime-gpu
 
 ### 2-1-2. ストレージサイズ
 
