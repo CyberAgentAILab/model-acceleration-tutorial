@@ -93,6 +93,30 @@ wheel                    0.37.1
 フレームワーク本体以外の部分だけで `4.5 GB` もの依存パッケージが勝手にインストールされることが分かりました。なお、 `--no-deps` オプションを指定して `pip install` すれば本体のみをインストールすることが可能なためストレージ消費をもっと低く抑えることは可能ですが、依存するパッケージをインストールしないため、フレームワークが実質まともに動作しません。
 
 #### 2. TensorFlow
+[Dockerfile.tensorflow](./Dockerfile.tensorflow)
+
+```Dockerfile
+FROM ubuntu:22.04
+ENV DEBIAN_FRONTEND=noninteractive
+SHELL ["/bin/bash", "-c"]
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        python3-pip \
+    && pip install \
+        tensorflow \
+    && apt clean \
+    && rm -rf /var/lib/apt/lists/* \
+    && rm /etc/apt/apt.conf.d/docker-clean \
+    && pip cache purge
+```
+```bash
+docker build -t tensorflow -f Dockerfile.tensorflow .
+docker images
+```
+Docker イメージのサイズが Wheel ファイルのサイズを大幅に超過しました。
+```bash
+ubuntu 22.04 7af9ba4f0a47 2 weeks ago 77.9MB
+```
 
 #### 3. onnxruntime-gpu
 
