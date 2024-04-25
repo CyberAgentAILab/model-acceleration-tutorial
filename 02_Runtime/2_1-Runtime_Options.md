@@ -11,4 +11,15 @@ PyTorch や TensorFlow などで設計したモデルを学習し、プロダク
 
 では、上で挙げた点についてひとつづつ具体例を挙げていきます。
 
+### 2-1-1. インストーラやバイナリのサイズ
+
+### 2-1-2. ストレージサイズ
+
+### 2-1-3. モデルとソースコードの管理
+
+### 2-1-4. ハードウェアへの最適化
+
+### 2-1-5. フレームワーク間コンバージョン
+
+
 **[■ 目次](https://github.com/CyberAgentAILab/model-acceleration-tutorial/tree/main?tab=readme-ov-file#table-of-contents)**　**[◀ 前へ](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/01_Introduction/1_2-What_to_explain_and_what_not_to_explain.md)**　**[次へ ▶]()**
