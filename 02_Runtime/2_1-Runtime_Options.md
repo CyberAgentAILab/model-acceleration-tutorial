@@ -118,7 +118,7 @@ docker images
 ubuntu 22.04 7af9ba4f0a47 2 weeks ago 77.9MB
 tensorflow latest 787922c5739a 18 seconds ago 2.09GB
 ```
-依存関係を見てみます。
+依存関係を見てみます。パッケージの数自体はかなり多いですが、ストレージの消費量は PyTorch の半分ほどでした。
 ```bash
 docker run tensorflow pip list
 
