@@ -54,7 +54,7 @@ Docker イメージのサイズが Wheel ファイルのサイズを大幅に超
 ubuntu 22.04 7af9ba4f0a47 2 weeks ago 77.9MB
 torch latest a8683c508332 48 seconds ago 5.33GB
 ```
-では、フレームワーク本体以外の部分がどれぐらい多く依存関係としてインストールされたかを見てみます。
+では、フレームワーク本体以外の依存関係部分でどれほど多くのパッケージが追加インストールされたかを見てみます。
 ```bash
 docker run torch pip list
 
