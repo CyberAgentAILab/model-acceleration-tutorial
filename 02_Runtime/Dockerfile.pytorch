@@ -1,0 +1,14 @@
+FROM ubuntu:22.04
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        python3-pip \
+    && pip install \
+        torch \
+        torchvision \
+        torchaudio \
+    && apt clean \
+    && rm -rf /var/lib/apt/lists/* \
+    && rm /etc/apt/apt.conf.d/docker-clean \
+    && pip cache purge
