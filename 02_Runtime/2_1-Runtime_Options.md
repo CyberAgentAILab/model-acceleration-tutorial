@@ -26,11 +26,13 @@ PyTorch や TensorFlow などで設計したモデルを学習し、プロダク
 docker pull ubuntu:22.04
 ```
 
-1. PyTorch
+#### 1. PyTorch
+[Dockerfile.pytorch](./Dockerfile.pytorch)
+
 ```Dockerfile
 FROM ubuntu:22.04
 ENV DEBIAN_FRONTEND=noninteractive
-
+SHELL ["/bin/bash", "-c"]
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         python3-pip \
@@ -52,7 +54,7 @@ Docker イメージのサイズが Wheel ファイルのサイズを大幅に超
 ubuntu 22.04 7af9ba4f0a47 2 weeks ago 77.9MB
 torch latest a8683c508332 48 seconds ago 5.33GB
 ```
-では、フレームワーク本体以外の部分がどれぐらい多く依存関係としてインストールされたかを見てみます。
+では、フレームワーク本体以外の依存関係部分でどれほど多くのパッケージが追加インストールされたかを見てみます。
 ```bash
 docker run torch pip list
 
@@ -88,12 +90,11 @@ triton                   2.3.0
 typing_extensions        4.11.0
 wheel                    0.37.1
 ```
-フレームワーク本体以外の部分だけで 4.5 GB もの依存パッケージが勝手にインストールされることが分かりました。なお、 `--no-deps` オプションを指定して `pip install` すれば本体のみをインストールすることが可能なためストレージ消費をもっと低く抑えることは可能ですが、依存するパッケージをインストールしないため、フレームワークが実質まともに動作しません。
+フレームワーク本体以外の部分だけで `4.5 GB` もの依存パッケージが勝手にインストールされることが分かりました。なお、 `--no-deps` オプションを指定して `pip install` すれば本体のみをインストールすることが可能なためストレージ消費をもっと低く抑えることは可能ですが、依存するパッケージをインストールしないため、フレームワークが実質まともに動作しません。
 
-2. TensorFlow
+#### 2. TensorFlow
 
-3. onnxruntime-gpu
-
+#### 3. onnxruntime-gpu
 
 ### 2-1-2. ストレージサイズ
 
