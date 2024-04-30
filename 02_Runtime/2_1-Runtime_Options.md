@@ -221,9 +221,9 @@ wheel           0.37.1
 
 ### 2-1-3. ハードウェアへの最適化
 ハードウェアとひとくちに言っても様々有ります。
-1. CPU (x64/ARM32/ARM64/etc...)
-2. GPU (NVIDIA RTXxxxx/AMD Radeon/Intel Arc/etc...)
-3. AI Accelerator (TPU/Myriad/Hailo-8/MN-Core/etc...)
+1. CPU (x64, ARM32, ARM64, RISC-V, etc...)
+2. GPU (NVIDIA RTXxxxx, AMD Radeon, Intel Arc, etc...)
+3. AI Accelerator (TPU, Myriad, Hailo-8, MN-Core, etc...)
 
 ### 2-1-4. フレームワーク間コンバージョン
 
