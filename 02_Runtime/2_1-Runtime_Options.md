@@ -225,6 +225,19 @@ wheel           0.37.1
 2. GPU (NVIDIA RTXxxxx, AMD Radeon, Intel Arc, etc...)
 3. AI Accelerator (TPU, Myriad, Hailo-8, MN-Core, etc...)
 
+昔から議論されて尽くされていますので、ここではコンピュータ・サイエンスの細かな部分には触れませんが、私が目にするアクセラレータはNHWC形式のテンソルを期待しているものが今のところは多いです。気になる方はこちらのブログ記事がわかりやすくまとまっているようですのでそちらをご覧ください。
+
+[NHWC vs NCHW : A memory access perspective on GPUs](https://medium.com/@deepika_writes/nhwc-vs-nchw-a-memory-access-perspective-on-gpus-4e79bd3b1b54)
+
+また、下記は記事内で引用されているNVIDIAさんの公開資料です。様々な観点でパフォーマンスが分析されています。
+
+[Convolutional Layers User's Guide](https://docs.nvidia.com/deeplearning/performance/dl-performance-convolutional/index.html#imp-gemm-dim)
+
+`PyTorch` で採用されている `NCHW` 形式より、リサーチ分野ではほとんど目にすることが無くなった `TensorFlow` で採用されている `NHWC` 形式の処理パフォーマンスが優れていることを示す図を１箇所だけ引用しておきます。
+
+![image](https://github.com/CyberAgentAILab/model-acceleration-tutorial/assets/33194443/b0686eac-ac6b-40e0-9d67-737bb7a33ec6)
+
+
 ### 2-1-4. フレームワーク間コンバージョン
 
 
