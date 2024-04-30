@@ -229,7 +229,9 @@ wheel           0.37.1
 
 [NHWC vs NCHW : A memory access perspective on GPUs](https://medium.com/@deepika_writes/nhwc-vs-nchw-a-memory-access-perspective-on-gpus-4e79bd3b1b54)
 
-また、下記は記事内で引用されているNVIDIAさんの公開資料です。様々な観点でパフォーマンスが分析されています。
+![image](https://github.com/CyberAgentAILab/model-acceleration-tutorial/assets/33194443/e246304b-f2a8-4df0-82a3-fe6e703f034e)
+
+また、下記は記事内で引用されているNVIDIAさんの公開資料です。様々な観点でハードウェアによる処理パフォーマンスが分析されています。
 
 [Convolutional Layers User's Guide](https://docs.nvidia.com/deeplearning/performance/dl-performance-convolutional/index.html#imp-gemm-dim)
 
