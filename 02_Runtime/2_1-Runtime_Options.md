@@ -251,6 +251,8 @@ wheel           0.37.1
 
 
 ### 2-1-4. フレームワーク間コンバージョン
+前節までの内容をまとめると、 `NCHW` 形式を前提とする `PyTorch` でモデルを設計し、 `NHWC` 形式でデバイスにデプロイする、という方法が理想的なフローのように見えます。
+
 
 
 **[■ 目次](https://github.com/CyberAgentAILab/model-acceleration-tutorial/tree/main?tab=readme-ov-file#table-of-contents)**　**[◀ 前へ](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/01_Introduction/1_2-What_to_explain_and_what_not_to_explain.md)**　**[次へ ▶](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/02_Runtime/2_2-Model_Deployment_Destination_Device_and_Runtime_Combination.md)**
