@@ -239,6 +239,16 @@ wheel           0.37.1
 
 ![image](https://github.com/CyberAgentAILab/model-acceleration-tutorial/assets/33194443/b0686eac-ac6b-40e0-9d67-737bb7a33ec6)
 
+記事や資料を読んで頂くと分かるとおり、モデル設計時や学習時のパフォーマンスはともかくとして、推論時のパフォーマンスにおいては `NHWC` が少し有利のように見えます。ただ、最近は PyTorch においてもエッジデバイス向けにランタイムの最適化を始めているようですので状況の注視が必要です。
+
+- ExecuTorch
+
+    ExecuTorch is an end-to-end solution for enabling on-device inference capabilities across mobile and edge devices including wearables, embedded devices and microcontrollers. It is part of the PyTorch Edge ecosystem and enables efficient deployment of PyTorch models to edge devices.
+
+    https://github.com/pytorch/executorch
+
+2024年04月時点で上記は絶賛開発中のものですが、あと数年後にはもしかしたら状況が大きく変わるかもしれませんが、現時点において `NHWC` 形式を前提としたアクセラレータが比較的多いという前提に立った場合、 `NHWC` を前提とした ランタイム あるいは フレームワーク も無視することができません。
+
 
 ### 2-1-4. フレームワーク間コンバージョン
 
