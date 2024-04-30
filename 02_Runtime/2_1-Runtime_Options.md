@@ -253,5 +253,7 @@ wheel           0.37.1
 ### 2-1-4. フレームワーク間コンバージョン
 前節までの内容をまとめると、 `NCHW` 形式を前提とする `PyTorch` でモデルを設計し、 `NHWC` 形式でデバイスにデプロイする、という方法が理想的なフローのように見えます。モデル設計や学習のし易さ、論文実装の膨大さの観点から `PyTorch` はとても良い選択肢です。 `TensorFlow` に `PyTorch` のようなしなやかさが備わっていれば、 学習から end-to-end でデバイスに最適化できる `TensorFlow` は不動の地位を築いていたかもしれません。残念ながら現時点では、研究開発でモデルを設計する多くのリサーチャーとモデルを実際にデプロイするエンジニアの間には大きな壁が存在しています。
 
+今のところ、データセンターのように潤沢な計算リソースと大容量の電源を確保できる環境は限られており、汎用的に多くの環境へデプロイするには `PyTorch` 単体では困難を伴うことがあります。最初にご説明したランタイムのサイズの観点やハードウェアへの最適化の観点など、さまざまな要因が存在します。したがって、特定のフレームワークならびにランタイムに依存し過ぎないように、設計したモデルをフレームワーク間でコンバージョンすることもひとつの選択肢に挙がります。
+
 
 **[■ 目次](https://github.com/CyberAgentAILab/model-acceleration-tutorial/tree/main?tab=readme-ov-file#table-of-contents)**　**[◀ 前へ](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/01_Introduction/1_2-What_to_explain_and_what_not_to_explain.md)**　**[次へ ▶](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/02_Runtime/2_2-Model_Deployment_Destination_Device_and_Runtime_Combination.md)**
