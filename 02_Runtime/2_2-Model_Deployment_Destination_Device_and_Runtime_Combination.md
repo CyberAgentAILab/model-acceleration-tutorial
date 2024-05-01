@@ -9,4 +9,6 @@
 
 エンジニアリングの観点で言えば、デバイスごとに適切なフレームワーク あるいは ランタイムを介してモデルを実行する必要があるため、PyTorch / TensorFlow / JAX 単体ではどうにもならないことが多いです。また、それぞれのランタイムには独特のクセや、未実装のオペレータ、対応可能なテンソルの次元数の限界などがあります。
 
+PyTorch や TensorFlow などの大規模フレームワークには一部が取り込まれていることがありますが、全てが横断的にフォローされているわけではないため、個別に最適化やランタイムへ適合させるためのコンバージョンが必要になります。これがモデルを実運用に移行する際の最も大きなボトルネックです。
+
 **[■ 目次](https://github.com/CyberAgentAILab/model-acceleration-tutorial/tree/main?tab=readme-ov-file#table-of-contents)**　**[◀ 前へ](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/02_Runtime/2_1-Runtime_Options.md)**　**[次へ ▶]()**
