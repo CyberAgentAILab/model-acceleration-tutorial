@@ -289,4 +289,6 @@ wheel           0.37.1
 
 モデルの共通的な記述仕様へ統一されていき、モデルの開発から最終デプロイまでのワークフローがほぼ同じになることが期待されます。今のところはチュートリアルがとても簡易的で、デバイスへのデプロイまでの統一的なフローが実現されているようにはあまり見えない状況ではありますが、参画デベロッパーの全てがこの仕組みを取り入れることで、将来的には学習用フレームワークや最終デプロイ先のデバイスの種類をあまり意識する必要が無くなるかもしれません。
 
+この仕組みが早く世界中に浸透することを願ってやみませんが、現時点では参考例や製品で標準的に使用されている事例などの情報が極めて少ないため、最終デプロイ先のデバイス向けにモデルをコンバージョンする前提で、どれぐらいのデバイスの種類があるか、それぞれの特性に応じたデプロイ方法の組み合わせ、現時点で取りうる対策について次の節以降で触れます。
+
 **[■ 目次](https://github.com/CyberAgentAILab/model-acceleration-tutorial/tree/main?tab=readme-ov-file#table-of-contents)**　**[◀ 前へ](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/01_Introduction/1_2-What_to_explain_and_what_not_to_explain.md)**　**[次へ ▶](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/02_Runtime/2_2-Model_Deployment_Destination_Device_and_Runtime_Combination.md)**
