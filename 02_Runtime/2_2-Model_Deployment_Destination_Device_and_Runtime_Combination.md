@@ -19,4 +19,6 @@ PyTorch や TensorFlow などの大規模フレームワークには一部が取
 
 ![image](https://github.com/CyberAgentAILab/model-acceleration-tutorial/assets/33194443/0ec165eb-b18e-4889-a563-d68b9debc11e)
 
+前書きがかなり長くなりましたが、ここまでの内容を踏まえて PyTorch や TensorFlow などの大規模フレームワークから ONNX あるいは 他のランタイムへコンバージョンする前提とした場合に、モデル設計時に考慮しておいたほうが運用の柔軟性が向上するポイントについて説明していきます。
+
 **[■ 目次](https://github.com/CyberAgentAILab/model-acceleration-tutorial/tree/main?tab=readme-ov-file#table-of-contents)**　**[◀ 前へ](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/02_Runtime/2_1-Runtime_Options.md)**　**[次へ ▶]()**
