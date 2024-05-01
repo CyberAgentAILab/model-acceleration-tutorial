@@ -255,9 +255,13 @@ wheel           0.37.1
 
 今のところ、データセンターのように潤沢な計算リソースと大容量の電源を確保できる環境は限られており、汎用的に多くの環境へデプロイするには `PyTorch` 単体では困難を伴うことがあります。最初にご説明したランタイムのサイズの観点やハードウェアへの最適化の観点など、さまざまな要因が存在します。したがって、特定のフレームワークならびにランタイムに依存し過ぎないように、設計したモデルをフレームワーク間でコンバージョンすることもひとつの選択肢に挙がりますが、スムーズにコンバージョンできる状況はあまり多くありません。その理由は、実はモデルの設計時点でコンバージョンの難易度を無意識に上げてしまっていることが要因のひとつとして挙げられます。
 
-なお、特定のハードウェアとフレームワークが厳密に紐付いてしまい、とても運用しにくい状況を打開する取り組みがあるため、ココで少しだけ触れておきます。 `StableHLO` というプロジェクトで、これは様々なMLフレームワーク（TensorFlow、JAX、PyTorchなど）とMLコンパイラ（XLAやIREEなど）の相互運用性を高めることで、ML開発を簡素化し、加速することを目的としています。
+なお、特定のハードウェアとフレームワークが厳密に紐付いてしまい、とても運用しにくい状況を打開する取り組みがあるため、ココで少しだけ触れておきます。 `StableHLO` というプロジェクトで、これは様々なMLフレームワーク（TensorFlow、JAX、PyTorchなど）とMLコンパイラ（XLAやIREEなど）の相互運用性を高めることで、ML開発を簡素化し、加速することを目的としています。 また、`StableHLO` や `XLA (Accelerated Linear Algebra)` を取り込んだ `OpenXLA` というものが誕生しており、ありとあらゆる有力デベロッパーが互いに協力して、モデルのデプロイに関する障壁を取り払おうとしてくれています。2023年時点での参画企業は Alibaba, Amazon Web Services, AMD, Anyscale, Apple, Arm, Cerebras, Google, Graphcore, Hugging Face, Intel, Meta, NVIDIA, SiFive などです。
 
-- チュートリアル
+- OpenXLA - Google Open Source Blog
+
+    https://opensource.googleblog.com/2023/03/openxla-is-ready-to-accelerate-and-simplify-ml-development.html
+
+- StableHLO - チュートリアル
 
     English： https://openxla.org/stablehlo
 
@@ -266,6 +270,20 @@ wheel           0.37.1
 - StableHLO - GitHub
 
     https://github.com/openxla/stablehlo
+
+- XLA (Accelerated Linear Algebra) - チュートリアル
+
+    English: https://openxla.org/xla
+
+    Japanese: https://www.tensorflow.org/xla?hl=ja 
+
+`PyTorch` や `TensorFlow` でこの仕組みを活用するためのコミットが少しづつ追加されていることを観測しています。以下に `JAX` と `PyTorch` と `TensorFlow` での簡易的なサンプルが記載されているURLをご紹介します。
+
+    JAX (Hugging Face, TensorFlow): [Tutorial: Exporting StableHLO from JAX](https://openxla.org/stablehlo/tutorials/jax-export)
+    
+    PyTorch: [Tutorial: Exporting StableHLO from PyTorch](https://openxla.org/stablehlo/tutorials/pytorch-export)
+    
+    TensorFlow: [Tutorial: Embedding StableHLO in SavedModel](https://openxla.org/stablehlo/tutorials/savedmodel-embed)
 
 
 **[■ 目次](https://github.com/CyberAgentAILab/model-acceleration-tutorial/tree/main?tab=readme-ov-file#table-of-contents)**　**[◀ 前へ](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/01_Introduction/1_2-What_to_explain_and_what_not_to_explain.md)**　**[次へ ▶](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/02_Runtime/2_2-Model_Deployment_Destination_Device_and_Runtime_Combination.md)**
