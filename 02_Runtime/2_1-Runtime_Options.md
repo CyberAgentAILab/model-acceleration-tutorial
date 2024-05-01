@@ -253,9 +253,9 @@ wheel           0.37.1
 ### 2-1-4. フレームワーク間コンバージョン
 前節までの内容をまとめると、 `NCHW` 形式を前提として扱いやすい `PyTorch` でモデルを設計し、 `NHWC` 形式でデバイスにデプロイする、という方法が理想的なフローのように見えます。モデル設計や学習のし易さ、論文実装の膨大さの観点から `PyTorch` はとても良い選択肢です。 `TensorFlow` に `PyTorch` のようなしなやかさが備わっていれば、 学習から end-to-end でデバイスに最適化できる `TensorFlow` は不動の地位を築いていたかもしれません。残念ながら現時点では、研究開発でモデルを設計する多くのリサーチャーとモデルを実際にデプロイするエンジニアの間には大きな壁が存在しています。
 
-今のところ、データセンターのように潤沢な計算リソースと大容量の電源を確保できる環境は限られており、汎用的に多くの環境へデプロイするには `PyTorch` 単体では困難を伴うことがあります。最初にご説明したランタイムのサイズの観点やハードウェアへの最適化の観点など、さまざまな要因が存在します。したがって、特定のフレームワークならびにランタイムに依存し過ぎないように、設計したモデルをフレームワーク間でコンバージョンすることもひとつの選択肢に挙がりますが、スムーズにコンバージョンできる状況はあまり多くありません。その理由は、実はモデルの設計時点でコンバージョンの難易度を無意識に上げてしまっていることが要因のひとつとして挙げられます。
+今のところ、データセンターのように潤沢な計算リソースと大容量の電源を確保できる環境は限られており、汎用的に多くの環境へデプロイするには `PyTorch` 単体では困難を伴うことがあります。最初にご説明したランタイムのサイズの観点やハードウェアへの最適化の観点など、さまざまな要因が存在します。したがって、特定のフレームワークならびにランタイムに依存し過ぎないように、設計したモデルをフレームワーク間でコンバージョンすることもひとつの選択肢に挙がりますが、スムーズにコンバージョンできる状況はあまり多くありません。その理由は、実はモデルの設計時点でコンバージョンの難易度を無意識に上げてしまっていることが要因のひとつとして挙げられます。特定のハードウェアとフレームワークが厳密に紐付いてしまい、開発要件や環境によって使用するフレームワークが異なる状況が多いためとても手間が多いです。
 
-なお、特定のハードウェアとフレームワークが厳密に紐付いてしまい、とても運用しにくい状況を打開する取り組みがあるため、ココで少しだけ触れておきます。 `StableHLO` というプロジェクトで、これは様々なMLフレームワーク（TensorFlow、JAX、PyTorchなど）とMLコンパイラ（XLAやIREEなど）の相互運用性を高めることで、ML開発を簡素化し、加速することを目的としています。 また、`StableHLO` や `XLA (Accelerated Linear Algebra)` を取り込んだ `OpenXLA` というものが誕生しており、ありとあらゆる有力デベロッパーが互いに協力して、モデルのデプロイに関する障壁を取り払おうとしてくれています。2023年時点での参画企業は Alibaba, Amazon Web Services, AMD, Anyscale, Apple, Arm, Cerebras, Google, Graphcore, Hugging Face, Intel, Meta, NVIDIA, SiFive などです。
+なお、こういった状況を打開する取り組みがあるためココで少しだけ触れておきます。 `StableHLO` というプロジェクトで、これは様々なMLフレームワーク（TensorFlow、JAX、PyTorchなど）とMLコンパイラ（XLAやIREEなど）の相互運用性を高めることで、ML開発を簡素化し、加速することを目的としています。 また、`StableHLO` や `XLA (Accelerated Linear Algebra)` を取り込んだ `OpenXLA` というものが誕生しており、ありとあらゆる有力デベロッパーが互いに協力して、モデルのデプロイに関する障壁を取り払おうとしてくれています。2023年時点での参画企業は Alibaba, Amazon Web Services, AMD, Anyscale, Apple, Arm, Cerebras, Google, Graphcore, Hugging Face, Intel, Meta, NVIDIA, SiFive などです。
 
 - OpenXLA - Google Open Source Blog
 
@@ -286,5 +286,7 @@ wheel           0.37.1
 - TensorFlow:
   - [Tutorial: Embedding StableHLO in SavedModel](https://openxla.org/stablehlo/tutorials/savedmodel-embed)
   - [XLA: Optimizing Compiler for Machine Learning](https://openxla.org/xla/tf2xla)
+
+モデルの共通的な記述仕様へ統一されていき、モデルの開発から最終デプロイまでのワークフローがほぼ同じになることが期待されます。今のところはチュートリアルがとても簡易的で、デバイスへのデプロイまでの統一的なフローが実現されているようにはあまり見えない状況ではありますが、参画デベロッパーの全てがこの仕組みを取り入れることで、将来的には学習用フレームワークや最終デプロイ先のデバイスの種類をあまり意識する必要が無くなるかもしれません。
 
 **[■ 目次](https://github.com/CyberAgentAILab/model-acceleration-tutorial/tree/main?tab=readme-ov-file#table-of-contents)**　**[◀ 前へ](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/01_Introduction/1_2-What_to_explain_and_what_not_to_explain.md)**　**[次へ ▶](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/02_Runtime/2_2-Model_Deployment_Destination_Device_and_Runtime_Combination.md)**
