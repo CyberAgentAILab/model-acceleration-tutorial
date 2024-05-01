@@ -13,6 +13,8 @@ PyTorch や TensorFlow などの大規模フレームワークには一部が取
 
 ただ、幸いなことにあまり悲観しすぎる必要はありません。上図は `onnxruntime` でサポートされているバックエンドの表だと最初に記載しました。したがって、 `onnxruntime` を使用すれば、様々なバックエンドを `onnxruntime` のAPI経由で簡単に呼び出せます。推論時のおまじないのようなプログラムコードの作法が少なく、また、Python, C++、Rust などの主要言語から操作可能である点から、ランタイムのフロントエンドとしての役割がかなり優秀です。つまり、学習時に PyTorch を使用していようが、TensorFlow を使用していようが、JAX を使用していようが、ONNXフォーマットへコンバージョンさえ出来ればあまりバックエンドのことを注意深く意識しなくてもそのまま各種デバイス上で動作させることができます。 OpenXLA のような仕組みが整うまでの間はとても強力な仕組みであることは疑いがありません。　なお、Mac で使用される CoreML に関してはラインナップに記載がありませんが、しっかりサポートされています。
 
+なお、ランタイムのフロントエンドとして onnxruntime を使用する場合のオーバーヘッドはあまり感じることがありません。
+
 引用: https://github.com/microsoft/onnxruntime
 
 ![image](https://github.com/CyberAgentAILab/model-acceleration-tutorial/assets/33194443/0ec165eb-b18e-4889-a563-d68b9debc11e)
