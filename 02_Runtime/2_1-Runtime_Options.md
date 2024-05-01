@@ -255,5 +255,17 @@ wheel           0.37.1
 
 今のところ、データセンターのように潤沢な計算リソースと大容量の電源を確保できる環境は限られており、汎用的に多くの環境へデプロイするには `PyTorch` 単体では困難を伴うことがあります。最初にご説明したランタイムのサイズの観点やハードウェアへの最適化の観点など、さまざまな要因が存在します。したがって、特定のフレームワークならびにランタイムに依存し過ぎないように、設計したモデルをフレームワーク間でコンバージョンすることもひとつの選択肢に挙がりますが、スムーズにコンバージョンできる状況はあまり多くありません。その理由は、実はモデルの設計時点でコンバージョンの難易度を無意識に上げてしまっていることが要因のひとつとして挙げられます。
 
+なお、特定のハードウェアとフレームワークが厳密に紐付いてしまい、とても運用しにくい状況を打開する取り組みがあるため、ココで少しだけ触れておきます。 `StableHLO` というプロジェクトで、これは様々なMLフレームワーク（TensorFlow、JAX、PyTorchなど）とMLコンパイラ（XLAやIREEなど）の相互運用性を高めることで、ML開発を簡素化し、加速することを目的としています。
+
+- チュートリアル
+
+    English： https://openxla.org/stablehlo
+
+    Japanese： https://openxla.org/stablehlo?hl=ja
+
+- StableHLO - GitHub
+
+    https://github.com/openxla/stablehlo
+
 
 **[■ 目次](https://github.com/CyberAgentAILab/model-acceleration-tutorial/tree/main?tab=readme-ov-file#table-of-contents)**　**[◀ 前へ](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/01_Introduction/1_2-What_to_explain_and_what_not_to_explain.md)**　**[次へ ▶](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/02_Runtime/2_2-Model_Deployment_Destination_Device_and_Runtime_Combination.md)**
