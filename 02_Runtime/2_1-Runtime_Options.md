@@ -279,11 +279,12 @@ wheel           0.37.1
 
 `PyTorch` や `TensorFlow` でこの仕組みを活用するためのコミットが少しづつ追加されていることを観測しています。以下に `JAX` と `PyTorch` と `TensorFlow` での簡易的なサンプルが記載されているURLをご紹介します。
 
-    JAX (Hugging Face, TensorFlow): [Tutorial: Exporting StableHLO from JAX](https://openxla.org/stablehlo/tutorials/jax-export)
-    
-    PyTorch: [Tutorial: Exporting StableHLO from PyTorch](https://openxla.org/stablehlo/tutorials/pytorch-export)
-    
-    TensorFlow: [Tutorial: Embedding StableHLO in SavedModel](https://openxla.org/stablehlo/tutorials/savedmodel-embed)
-
+- JAX (Hugging Face, TensorFlow):
+  - [Tutorial: Exporting StableHLO from JAX](https://openxla.org/stablehlo/tutorials/jax-export)
+- PyTorch:
+  - [Tutorial: Exporting StableHLO from PyTorch](https://openxla.org/stablehlo/tutorials/pytorch-export)
+- TensorFlow:
+  - [Tutorial: Embedding StableHLO in SavedModel](https://openxla.org/stablehlo/tutorials/savedmodel-embed)
+  - [XLA: Optimizing Compiler for Machine Learning](https://openxla.org/xla/tf2xla)
 
 **[■ 目次](https://github.com/CyberAgentAILab/model-acceleration-tutorial/tree/main?tab=readme-ov-file#table-of-contents)**　**[◀ 前へ](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/01_Introduction/1_2-What_to_explain_and_what_not_to_explain.md)**　**[次へ ▶](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/02_Runtime/2_2-Model_Deployment_Destination_Device_and_Runtime_Combination.md)**
