@@ -14,7 +14,7 @@ ailab-onboarding-2024 "モデルコードの高速化・最適化チュートリ
 ### 2-1. [ランタイムの選択肢](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/02_Runtime/2_1-Runtime_Options.md) (15 min)
 ### 2-2. [モデルのデプロイ先デバイスとランタイムの組み合わせ](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/02_Runtime/2_2-Model_Deployment_Destination_Device_and_Runtime_Combination.md) (5 min)
 ## 3. 研究からプロダクト転用を見越したモデル設計時に注意したいこと
-### 3-1. CPU・GPU・TensorRT、他HW・FW推論を意識した設計
+### 3-1. [CPU・GPU・TensorRT、他HW・FW推論を意識した設計](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/03_Design/3_1-CPU_GPU_TensorRT_and_other_HW_and_FW_inference-aware_designs.md)
 ### 3-2. モデル構造アンチパターン・デザインパターン
 #### 3-2-1. 前処理
 #### 3-2-2. 本体
