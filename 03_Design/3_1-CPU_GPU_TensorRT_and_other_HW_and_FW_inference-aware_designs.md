@@ -6,8 +6,10 @@
 まず、大まかに意識しておいたほうがよいポイントを下記に列記します。
 
 1. 必要以上に次元の展開と圧縮を使用しない
-2. 連続するオペレーションの順序を入れ替えるだけで不必要な処理を減らせることがある
+2. 連続するオペレーションの順序を入れ替えてできる限り不必要なオペレーションを減らす
 3. 定数で表現可能な全てのオペレーションは事前に定数同士で演算しておいて定数そのもの、あるいは単純な四則演算の数を減らす
 4. 乗算に置き換え可能な演算はできる限り乗算に置き換えておく
+5. 言語仕様による数値計算上の端数の差異が生じる演算は極力割ける (小数部の処理、切り上げ、切り下げ、四捨五入、etc...)
+6. 真偽値と数値の間のキャスト (1->True, True->1, 0->False, False->0)
 
 **[■ 目次](https://github.com/CyberAgentAILab/model-acceleration-tutorial/tree/main?tab=readme-ov-file#table-of-contents)**　**[◀ 前へ](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/02_Runtime/2_2-Model_Deployment_Destination_Device_and_Runtime_Combination.md)**　**[次へ ▶]()**
