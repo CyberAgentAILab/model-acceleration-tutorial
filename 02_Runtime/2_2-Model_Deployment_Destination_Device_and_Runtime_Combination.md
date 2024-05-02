@@ -1,4 +1,4 @@
-**[■ 目次](https://github.com/CyberAgentAILab/model-acceleration-tutorial/tree/main?tab=readme-ov-file#table-of-contents)**　**[◀ 前へ](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/02_Runtime/2_1-Runtime_Options.md)**　**[次へ ▶]()**
+**[■ 目次](https://github.com/CyberAgentAILab/model-acceleration-tutorial/tree/main?tab=readme-ov-file#table-of-contents)**　**[◀ 前へ](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/02_Runtime/2_1-Runtime_Options.md)**　**[次へ ▶](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/03_Design/3_1-CPU_GPU_TensorRT_and_other_HW_and_FW_inference-aware_designs.md)**
 
 ## 2-2. モデルのデプロイ先デバイスとランタイムの組み合わせ (5 min)
 下記は `onnxruntime` のチュートリアルページにまとめられたサポート済みバックエンドの表を引用しています。表の列方向に推論に使用する機器 あるいは 適用ドメイン がまとまっています。若干列方向のまとめかたの粒度にばらつきがあり、直接の関連性が無いグルーピングになってはいますが、概ね知りたい切り口で分類されています。ひとくちに CPU / GPU といっても、Intel製、AMD製、ARM、などの様々なメーカーやアーキテクチャが混在している点にご注意ください。また、実際にはPCではなくスマートフォンやクラウド環境での利用を想定しているものまで混在しています。デバイスごとに最適化がなされているとはいえ組み合わせの多さに辟易します。
@@ -21,4 +21,4 @@ PyTorch や TensorFlow などの大規模フレームワークには一部が取
 
 前書きがかなり長くなりましたが、ここまでの内容を踏まえて PyTorch や TensorFlow などの大規模フレームワークから ONNX あるいは 他のランタイムへコンバージョンする前提とした場合に、モデル設計時に考慮しておいたほうが運用の柔軟性が向上するポイントについて説明していきます。
 
-**[■ 目次](https://github.com/CyberAgentAILab/model-acceleration-tutorial/tree/main?tab=readme-ov-file#table-of-contents)**　**[◀ 前へ](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/02_Runtime/2_1-Runtime_Options.md)**　**[次へ ▶]()**
+**[■ 目次](https://github.com/CyberAgentAILab/model-acceleration-tutorial/tree/main?tab=readme-ov-file#table-of-contents)**　**[◀ 前へ](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/02_Runtime/2_1-Runtime_Options.md)**　**[次へ ▶](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/03_Design/3_1-CPU_GPU_TensorRT_and_other_HW_and_FW_inference-aware_designs.md)**
