@@ -15,6 +15,6 @@
 8. 形状不定の次元をバッチサイズ以外の次元で複数持たない
 9. できる限りプリミティブなオペレーションを組み合わせる
 
-これらは、モデル展開先のフレームワークの内部実装バグの影響を受けやすいポイントであったり、モデルの構造上の冗長さをむやみに増やしたり、モデルの推論・演算パフォーマンスを大きく悪化させる事項であり、ちょっとしたことではあるもののモデルの汎用性を著しく低下させる要素です。
+これらは、モデル展開先のフレームワークの内部実装バグの影響を受けやすいポイントであったり、ハードウェアの特性上処理できない構造になったり、モデルの構造上の冗長さをむやみに増やしたり、モデルの推論・演算パフォーマンスを大きく悪化させる事項であり、ちょっとしたことではあるもののモデルの汎用性を著しく低下させる要素です。
 
 **[■ 目次](https://github.com/CyberAgentAILab/model-acceleration-tutorial/tree/main?tab=readme-ov-file#table-of-contents)**　**[◀ 前へ](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/02_Runtime/2_2-Model_Deployment_Destination_Device_and_Runtime_Combination.md)**　**[次へ ▶]()**
