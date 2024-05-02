@@ -11,5 +11,6 @@
 4. 乗算に置き換え可能な演算はできる限り乗算に置き換えておく
 5. 言語仕様による数値計算上の端数の差異が生じる演算は極力割ける (小数部の処理、切り上げ、切り下げ、四捨五入、etc...)
 6. 真偽値と数値の間のキャスト (1->True, True->1, 0->False, False->0)
+7. ５次元あるいはそれ以上のオペレーションをできる限り減らす
 
 **[■ 目次](https://github.com/CyberAgentAILab/model-acceleration-tutorial/tree/main?tab=readme-ov-file#table-of-contents)**　**[◀ 前へ](https://github.com/CyberAgentAILab/model-acceleration-tutorial/blob/main/02_Runtime/2_2-Model_Deployment_Destination_Device_and_Runtime_Combination.md)**　**[次へ ▶]()**
