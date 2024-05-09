@@ -20,4 +20,4 @@ ailab-onboarding-2024 "モデルコードの高速化・最適化チュートリ
 #### 3-2-2. 前処理 (5 min, Google Colaboratory上です)
 #### 3-2-3. モデル本体 (10 min, Google Colaboratory上です)
 #### 3-2-4. 後処理 (5 min, Google Colaboratory上です)
-## 5. おわりに (1 min)
+## 4. おわりに (1 min)
